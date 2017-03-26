@@ -20,14 +20,15 @@ var compGuess = letters[Math.round(Math.random(letters)*letters.length)];
 var userGuess = document.onkeyup=function(event){
 
 // This section should remove a remaining try from the total guesses
+    guessEntry-=1;
+
+// It should also add the key entered to the userBadGues array
     if (event.key.toUpperCase() !== compGuess) {
-        guessEntry-=1;
-        userBadGuess.push(event.key);
+        userBadGuess.push(event.key.toUpperCase());
         document.getElementById('guesses').innerHTML=userBadGuess.join(', ');
         document.getElementById('guessCount').innerHTML=guessEntry;
     }         
 
-// It should also add the key entered to the userBadGues array
 
 // This defines the reset condition if the player fails to guess right
     if (guessEntry==0) {
@@ -45,6 +46,7 @@ var userGuess = document.onkeyup=function(event){
         document.getElementById('win').innerHTML=winCount += 1;
         document.getElementById('guessCount').innerHTML=guessEntry = 9;
         document.getElementById('guesses').innerHTML="";
+        userBadGuess=[];
         compGuess = letters[Math.round(Math.random(letters)*letters.length)];
     }
 };
