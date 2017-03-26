@@ -25,20 +25,20 @@ var userGuess = document.onkeyup=function(event){
         userBadGuess.push(event.key);
         document.getElementById('guesses').innerHTML=userBadGuess.join(', ');
         document.getElementById('guessCount').innerHTML=guessEntry;
+    }         
 
 // It should also add the key entered to the userBadGues array
 
 // This defines the reset condition if the player fails to guess right
-        if (guessEntry==0) {
-            document.getElementById('loss').innerHTML=lossCount+1;
-            document.getElementById('guessCount').innerHTML=9;
-            guessEntry=9;
-            lossCount+=1;
-            userBadGuess=[];
-            compGuess = letters[Math.round(Math.random(letters)*letters.length)];
-        }
+    if (guessEntry==0) {
+        document.getElementById('loss').innerHTML=lossCount+1;
+        document.getElementById('guessCount').innerHTML=9;
+        guessEntry=9;
+        lossCount+=1;
+        userBadGuess=[];
+        compGuess = letters[Math.round(Math.random(letters)*letters.length)];
+    }
 
-    } 
    
 // This section should say what should happen when a user gets it right
     else if (event.key.toUpperCase() === compGuess) {
