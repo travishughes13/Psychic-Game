@@ -7,9 +7,6 @@
 	<!-- Link to the bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Link to the Javascript file -->
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
-
 	<!-- Link to Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Felipa|IM+Fell+English|Jim+Nightshade" rel="stylesheet">
 
@@ -18,8 +15,7 @@
 			font-family: 'Jim Nightshade', cursive;
 			font-family: 'Amatic SC', cursive;
 			font-family: 'Felipa', cursive;
-			font-family: 'IM Fell English', serif; -->
-	
+			font-family: 'IM Fell English', serif; -->	
 
 	<title>The Psychedelic Psychic</title>
 
@@ -27,13 +23,13 @@
 
 <body style="background-color: goldenrod">
 
-<header class="navbar navbar-default" style="background-image: url('assets/images/potential-header9.jpeg'); border-color: black;padding-left: 34%; font-family: 'IM Fell English', serif;">
+<header class="navbar navbar-default" style="background-image: url('assets/images/potential-header9.jpeg'); border-color: black; font-family: 'IM Fell English', serif;">
 
 	<div class="container-fluid">
 
 		<div class="navbar-header">
 
-			<div class="navbar-brand" style="color: white; background-color: black; font-family: 'IM Fell English', serif; font-size: 25px">Welcome to the Psychedelic Psychic</div>
+			<div class="navbar-brand" style="color: yellow; background-color: black; font-family: 'IM Fell English', serif; font-size: 20px">Welcome to the Psychedelic Psychic</div>
 
 		</div>
 
@@ -50,7 +46,7 @@
 
 			<div class="col-lg-3"></div>
 
-				<h1 class="col-lg-6" style="color: white; background-color: black; text-align: center; font-family: 'IM Fell English', serif;">The Psychic Game</h1>
+				<h1 class="col-lg-6" style="color: yellow; background-color: black; text-align: center; font-family: 'IM Fell English', serif; padding-top: 5px; padding-bottom: 5px">The Psychic Game</h1>
 
 			<div class="col-lg-1"></div>
 
@@ -64,7 +60,7 @@
 
 				<div class="col-md-2"></div>
 
-					<h2 class="col-lg-9" style="text-align: center; margin-left: -35px; color: white; font-family: 'IM Fell English', serif;">Can you guess what letter I'm thinking of?</h2>
+					<h2 class="col-lg-9" style="text-align: center; color: yellow; font-family: 'IM Fell English', serif;">Can you guess what letter I'm thinking of?</h2>
 
 				</div>
 
@@ -82,29 +78,33 @@
 
 	<div class="row">
 
-		<div class="col-md-3" style="color: white; padding-bottom: 5px; padding-top: 5px; background-color: black">Wins: 
+	<div class="container">
 
-			<div class="win"></div>
+		<div class="col-md-3" style="color: yellow; padding-bottom: 10px; padding-top: 10px; background-color: black; font-size: 15px">Wins: 
+
+			<div id="win"></div>
 		
 		</div>
 
-		<div class="col-md-3" style="color: white; padding-bottom: 5px; padding-top: 5px; background-color: black">Losses: 
+		<div class="col-md-3" style="color: yellow; padding-bottom: 10px; padding-top: 10px; background-color: black; font-size: 15px">Losses: 
 
-			<div class="loss"></div>
-
-		</div>
-
-		<div class="col-md-3" style="color: white; padding-bottom: 5px; padding-top: 5px; background-color: black">Guesses Left: 
-
-			<div class="guessCount"></div>
+			<div id="loss"></div>
 
 		</div>
 
-		<div class="col-md-3" style="color: white; padding-bottom: 5px; padding-top: 5px; background-color: black">Your guesses so far: 
+		<div class="col-md-3" style="color: yellow; padding-bottom: 10px; padding-top: 10px; background-color: black; font-size: 15px">Guesses Left: 
 
-			<div class="guesses"></div>
+			<div id="guessCount"></div>
 
 		</div>
+
+		<div class="col-md-3" style="color: yellow; padding-bottom: 10px; padding-top: 10px; background-color: black; font-size: 15px">Your guesses so far: 
+
+			<div id="guesses"></div>
+
+		</div>
+
+	</div>
 
 	</div>
 
@@ -124,6 +124,13 @@
 
 </div>	
 
+<div style="height: 50px;"></div>
+
+<footer style="width: 100%; color: yellow; background-color: black; padding-top: 15px; height: 55px; border-top-color: yellow; border-top-width: 5px; text-align: center; border-top-style: solid; bottom: 0px; position: relative; font-family: 'IM Fell English', serif;">© Copyright 2017 <a href="https://travishughes13.github.io/Bootstrap-Portfolio/" target="_blank" style="color:yellow; font-family: 'IM Fell English', serif;">Various Hues</a></footer>
+
 </body>
+
+<!-- Link to the Javascript file -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </html>
