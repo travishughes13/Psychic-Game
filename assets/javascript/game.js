@@ -19,10 +19,10 @@ var compGuess = letters[Math.round(Math.random(letters)*letters.length)];
 // This section defines the actions that occur when a user presses a key
 var userGuess = document.onkeyup=function(event){
 
-// This section should remove a remaining try from the total guesses
+// This section removes a remaining try from the total guesses
     guessEntry-=1;
 
-// It should also add the key entered to the userBadGues array
+// It adds the key entered to the userBadGuess array
     if (event.key.toUpperCase() !== compGuess) {
         userBadGuess.push(event.key.toUpperCase());
         document.getElementById('guesses').innerHTML=userBadGuess.join(', ');
@@ -34,6 +34,7 @@ var userGuess = document.onkeyup=function(event){
     if (guessEntry==0) {
         document.getElementById('loss').innerHTML=lossCount+1;
         document.getElementById('guessCount').innerHTML=9;
+        document.getElementById('guesses').innerHTML="";
         guessEntry=9;
         lossCount+=1;
         userBadGuess=[];
